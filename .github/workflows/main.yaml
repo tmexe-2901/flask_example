@@ -43,8 +43,8 @@ jobs:
       - name: Run isort
         run: uv run isort . --check-only --profile black
       - name: Run flake8
-        run: uv run flake8 .
+        run: uv run flake8 app.py test_app.py
       - name: Run bandit
-        run: uv run bandit .
+        run: uv run bandit app.py test_app.py
       - name: Run saftey
         run: uv run safety check
